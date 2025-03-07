@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-color: rgba(245, 242, 235, 0.753);
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+/* navbar */
+#navbar{
+    color: #494949;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar-links, .navbar-brand{
+    color: #494949;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.navbar-links a{
+    color: #494949;
+    margin: 0 20px;
+}
+.navbar-links a:hover{
+text-decoration: underline;
+}
+.page-title{
+    color: #494949;
+}
+
+/* page-links */
+#page-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.page-link{
+    margin: 20% 5%;
+    justify-content: space-around;
+    border-radius: 8%;
+    background-color: #494949;
+    padding: 20px;
+}
+.page-link-icon{
+    color: white;
+    font-size: 80px;
+}
+.page-link-text{
+    color: white;
+    font-size: 3rem;
+}
+
+/* bookings */
+#bookings-table{
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+th {
+    background-color: #494949;
+  }
+  table th:nth-of-type(1){
+    background-color: transparent;
+    }
+  h2{
+    text-align: center;
+  }
+.form-button {
+	/* box-shadow:inset 0px 0px 0px -15px #000000;
+	background:linear-gradient(to bottom, #000000 5%, #000000 100%); */
+	background-color:transparent;
+	border-radius:10px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #ffffff;
+    margin: 40px;
+}
+.form-button:hover {
+        border-color: rgb(0, 0, 0);
+        background-color: transparent;
+        transition: all .2s ease-in-out;
+}
+.form-button:active {
+	position:relative;
+	top:1px;
+}

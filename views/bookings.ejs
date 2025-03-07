@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookings</title>
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- date format
+    https://www.npmjs.com/package/date-format -->
+
+    <div id="navbar">
+        <div class="navbar-brand">
+            <h3>4K TRIMZ</h3>
+        </div>
+        <div class="page-title">
+            <h1>Bookings</h1>
+        </div>
+        <div class="navbar-links">
+            <a href="/admin">Logout</a>
+            <a href="/dashboard">Dashboard</a>
+        </div>
+    </div>
+
+    <table id="bookings-table">
+            <th>
+                 <th>Date</th>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Haircut</th>
+                <th>Cancel</th>
+            </th>
+            <% for (let cut of bookedHaircut) { %>
+            <tr>
+                <td></td>
+                <td><%= cut.date %></td>
+                <td><%= cut.time %></td>
+                <td><%= cut.name %></td>
+                <td><%= cut.email %></td>
+                <td><%= cut.haircut %></td> 
+                <td>  
+                    <form method="post" action="/bookings/<%=cut._id%>?_method=DELETE" >
+                            <button class="form-button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <%  } %>
+    </table>
+
+    <script src="" async defer></script>
+</body>
+
+</html>

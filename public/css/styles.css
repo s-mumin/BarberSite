@@ -1,0 +1,456 @@
+/* todo 
+
+1. animate text and photos
+https://www.w3schools.com/css/css3_animations.asp
+
+2. gallery page using photos and layout from links below
+https://www.pexels.com/collections/barber-shop-hxu2jt3/
+https://www.youtube.com/watch?v=L0Pk3OVbxRU - 3:00 - use format for hairstyle images
+
+3 booked page and login error page completion - standard not too high, just get it done  -  somewhat DONE
+
+4. admin portal booking - DONE
+5. admin portal show users - DONE
+6. simple 404 page - DONE
+7. booked page - DONE
+8. site deployment - https://www.youtube.com/watch?v=MusIvEKjqsc
+
+
+nice to have - https://www.youtube.com/watch?v=-RCnNyD0L-s
+sessions and only accessing pages if logged in
+*/
+
+
+/* 4 SITES DOWN AND 2 IN THE DRIVE. UR NEARLY THERE. I BELIEVE IN U */
+
+
+
+body {
+    background-color: rgb(84, 92, 92);
+    margin: auto;
+    /* font-family: "Yeseva One", serif; */
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr{
+    width: 95%;
+}
+
+/* navbar */
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.navbar-brand a{
+    color: #ffffff;
+}
+.navbar-links,
+.navbar-brand {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    margin: 0 20px;
+}
+
+.navbar-links-mobile {
+    visibility: hidden;
+}
+
+.navbar-links-mobile a {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    color: white;
+}
+
+#navbar-menu-button {
+    visibility: hidden;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#navbar-menu-button:hover {
+    color: rgb(255, 255, 255);
+    border-color: white;
+}
+
+#main-vid{
+    width: 100vw;
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+}
+
+/* main section */
+#main-section {
+    /* height: 40vw; */
+    position: relative;
+    /* background-image: url("/images/clippers.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+#main-section-text {
+    text-align: center;
+    color: white;
+    padding: 18% 0;
+    margin: -50px 0%;
+    font-size: 2rem;
+}
+#main-section-text I{
+    font-size: em;
+}
+
+#main-btn {
+    box-shadow: inset 0px -3px 7px 0px #b4b7b8;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 13px 37px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+#main-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+#main-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* pricing */
+#pricing {
+    padding: 30px 0;
+    color: #000000;
+    background-color: rgb(43, 43, 43);
+}
+#pricing-text{
+    margin-left: 4%;
+}
+.haircut-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.haircut-card {
+    border-radius: 8px;
+}
+.haircut-type {
+    margin: 20px;
+    width: 650px;
+}
+.haircut-photo {
+    margin: auto;
+    width: 650px;
+}
+.haircut-photo-1{
+    /* margin: 20px; */
+    height: 435px;
+    width: 650px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pricing-photos 20s  ease-in-out infinite;
+}
+.haircut-photo img {
+    border: 1px solid #504c4c;
+    border-radius: 5px;
+    width: 650px;
+}
+.haircut-price {
+    text-align: center;
+    width: 650px;
+}
+
+/* booking */
+#booking {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+#booking-text {
+    text-align: center;
+    justify-content: left;
+    width: 50vw;
+}
+#booking-text p {
+    margin: auto;
+    text-align: left;
+    width: 80%;
+}
+#booking-text ul {
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    list-style-type: none;
+    /* width: 14%; */
+}
+#booking-text ul li{
+    justify-content: center;
+    align-items: end;
+    width: 160px;
+    margin: 30px 0;
+}
+
+#booking-form {
+    background-color: #4d4d4d;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    text-align: left;
+}
+form>i,
+input,
+select,
+button {
+    margin: 1%;
+    padding: 12px 32px;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+}
+form>label {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+}
+input {
+    border-radius: 5px;
+}
+#form-button {
+    box-shadow: inset 0px 0px 0px -15px #000000;
+    /* background:linear-gradient(to bottom, #000000 5%, #000000 100%); */
+    background-color: rgb(94, 94, 94);
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 11px 90px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #ffffff;
+    margin: 12px 0;
+}
+#form-button:hover {
+    color: rgb(156, 156, 156);
+    border: 1px solid #ffffff;
+    background-color: rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
+}
+#form-button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+/* footer */
+#footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+#footer>div {
+    margin: 50px;
+}
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-top-links {
+    display: flex;
+    flex-direction: column;
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-top-links a,
+.footer-bottom-links a {
+    color: #ffffff;
+    font-size: .75em;
+}
+.socials a {
+    color: #dedede;
+    border: .5px solid;
+    border-radius: 100%;
+    border-color: #ffffff;
+    background-color: transparent;
+    padding: 5px;
+}
+.socials a:hover {
+    background-color: black;
+    opacity: .5;
+}
+
+/* animations */
+@keyframes pricing-photos {
+    0%   {
+        animation-delay: 10s;
+    background-image: url("/images/kids1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    50%  {
+    background-image: url("/images/kids3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    100% {
+    background-image: url("/images/kids1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  }
+
+
+
+/* responsive web design */
+@media only screen and (min-width: 1400px) {
+    .navbar-links-mobile {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #main-section{
+        background-image: url("/images/clippers.jpg");
+        /* height:700px; */
+        /* height: 40vh; */
+    }
+    #main-vid{
+        /* height:700px; */
+        /* width: 100vw; */
+        /* height: 40vh; */
+    }
+    /* #main-section-text {
+
+        padding: 1%;
+        margin: 0 0%;
+    } */
+    /* #main-section-text I{
+        font-size: 5em;
+    } */
+}
+
+
+/* mobile view */
+@media only screen and (max-width: 800px) {
+    /* #main-section{
+        height:700px;
+    } */
+    /* #main-vid{
+        height:700px;
+    } */
+    /* navbar */
+    .navbar-links {
+        visibility: hidden;
+    }
+
+    #navbar-menu-button {
+        visibility: visible;
+    }
+
+    .navbar-links-mobile {
+        visibility: hidden;
+    }
+
+    .navbar-links-mobile-active {
+        visibility: visible;
+    }
+
+    /* pricing */
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .haircut-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    /* booking */
+    #booking {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    #booking-text {
+        text-align: center;
+        justify-content: left;
+        width: 100vw;
+    }
+    /* #booking-text p {
+        margin: auto;
+        text-align: left;
+        width: 80%;
+    } */
+    #booking-form {
+        background-color: #4d4d4d;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form {
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #navbar {
+        justify-content: space-between;
+        /* padding: 50px; */
+    }
+
+    /* .navbar-links, .navbar-brand{
+        padding: 50px;
+    } */
+    .footer-top {
+        flex-direction: column-reverse;
+    }
+}

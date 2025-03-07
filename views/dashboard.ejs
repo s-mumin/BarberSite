@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- in app.js - copy the dashboard function into admin so u can access dashboard, users and bookings only after being logged in -->
+
+    <!-- navbar -->
+    <div id="navbar">
+        <div class="navbar-brand">
+            <h3>4K TRIMZ</h3>
+        </div>
+        <div class="page-title">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="navbar-links">
+            <a href="/admin">Logout</a>
+        </div>
+    </div>
+
+
+    <!-- pages -->
+    <!-- <div id="page-links">
+        <div class="page-link">
+            <a href="/dashboard/bookings">
+                <div class="page-link-icon">
+                    <i class="fa-solid fa-list"></i>
+                </div>
+                <div class="page-link-text">
+                    <p>Haircuts</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="page-link">
+            <a href="/dashboard/users">
+                <div class="page-link-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="page-link-text">
+                    <p>Users</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="page-link">
+            <a href="/dashboard/adminbookings">
+                <div class="page-link-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="page-link-text">
+                    <p>Bookings</p>
+                </div>
+            </a>
+        </div>
+    </div> -->
+
+
+    <table id="bookings-table">
+        <h2>Booked Haircuts</h2>
+            <th>
+                 <th>Date</th>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Haircut</th>
+                <th>Cancel</th>
+            </th>
+            <% for (let cut of bookedHaircut) { %>
+            <tr>
+                <td></td>
+                <td><%= cut.date %></td>
+                <td><%= cut.time %></td>
+                <td><%= cut.name %></td>
+                <td><%= cut.email %></td>
+                <td><%= cut.haircut %></td> 
+                <td>  
+                    <form method="post" action="/dashboard/<%=cut._id%>?_method=DELETE" >
+                            <button class="form-button"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+            <%  } %>
+    </table>
+
+
+
+    <p>&COPY;4KTRIMZ 2025</p>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

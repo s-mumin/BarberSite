@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin-Portal - Login</title>
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <div id="navbar">
+        <div class="navbar-brand">
+            <h3>4K TRIMZ</h3>
+        </div>
+        <div class="page-title">
+            <h1>Admin</h1>
+        </div>
+        <div class="navbar-links">
+            <a href="/">home</a>
+        </div>
+    </div>
+
+    <!-- form -->
+    <div id="admin-login">
+        <form action="/dashboard" method="post">
+            <h1>Login</h1>
+            <p>Welcome back to the 4K Trimz Admin Portal</p>
+            <i class="fa-solid fa-user"></i>
+            <label class="form">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <label class="form">Password:</label>
+            <input type="password" name="password" placeholder="password" required>
+            <button class="admin-button" type="submit" class="form">Login</button>
+        </form>
+    </div>
+
+
+    
+    <script src="/index.js" async defer></script>
+</body>
+
+</html>
