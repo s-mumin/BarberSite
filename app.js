@@ -8,10 +8,6 @@ const handlebars = require("handlebars")
 const methodOverride = require("method-override")
 // const mjml = require ("mjml")
 
-// RENDER HOSTING
-// https://www.youtube.com/watch?v=q8GSWGu2roA
-
-
 // MIDDLEWARE
 
 app.set('view engine', 'ejs');
@@ -26,14 +22,15 @@ app.use(methodOverride("_method"))
 //DATABASE
 //database
 const mongoose = require('mongoose');
-const { compileFunction } = require("vm");
+// const { compileFunction } = require("vm");
 // const { getMaxListeners } = require("events");
-mongoose.connect('mongodb://127.0.0.1:27017/barbersite')
+mongoose.connect('mongodb+srv://admin:test@cluster0.ovl7m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then( () => {
     console.log("WORKING")
 })
 .catch(err => {
     console.log("NOT CONNECTED")
+    console.log(err)
 })
 
 // phase 1
