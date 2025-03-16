@@ -7,23 +7,7 @@ https://www.w3schools.com/css/css3_animations.asp
 https://www.pexels.com/collections/barber-shop-hxu2jt3/
 https://www.youtube.com/watch?v=L0Pk3OVbxRU - 3:00 - use format for hairstyle images
 
-3 booked page and login error page completion - standard not too high, just get it done  -  somewhat DONE
-
-4. admin portal booking - DONE
-5. admin portal show users - DONE
-6. simple 404 page - DONE
-7. booked page - DONE
-8. site deployment - https://www.youtube.com/watch?v=MusIvEKjqsc
-
-
-nice to have - https://www.youtube.com/watch?v=-RCnNyD0L-s
-sessions and only accessing pages if logged in
-*/
-
-
 /* 4 SITES DOWN AND 2 IN THE DRIVE. UR NEARLY THERE. I BELIEVE IN U */
-
-
 
 body {
     background-color: rgb(84, 92, 92);
@@ -36,14 +20,8 @@ body {
     font-weight: 300;
     font-style: normal;
 }
-
-a {
-    text-decoration: none;
-}
-
-hr{
-    width: 95%;
-}
+a {text-decoration: none;}
+hr{width: 95%;}
 
 /* navbar */
 #navbar {
@@ -62,63 +40,53 @@ hr{
     flex-direction: row;
     margin: 20px;
 }
-
 .navbar-links a {
     color: white;
     margin: 0 20px;
 }
-
 .navbar-links-mobile {
     visibility: hidden;
 }
-
 .navbar-links-mobile a {
     display: flex;
     flex-direction: column;
     margin: 20px;
     color: white;
 }
-
 #navbar-menu-button {
     visibility: hidden;
     color: white;
     background-color: transparent;
     border-color: transparent;
 }
-
 #navbar-menu-button:hover {
     color: rgb(255, 255, 255);
     border-color: white;
 }
-
 #main-vid{
     width: 100vw;
     opacity: 0.2;
     position: absolute;
     z-index: -1;
 }
-
 /* main section */
 #main-section {
-    /* height: 40vw; */
     position: relative;
-    /* background-image: url("/images/clippers.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
 }
-
 #main-section-text {
     text-align: center;
     color: white;
-    padding: 18% 0;
-    margin: -50px 0%;
+    padding: 0 40%;
+    margin: 15% 0;
     font-size: 2rem;
 }
-#main-section-text I{
-    font-size: em;
+#main-section-booked{
+ margin: 150px 0;
 }
-
+#main-section-text i{font-size: 4em;}
 #main-btn {
     box-shadow: inset 0px -3px 7px 0px #b4b7b8;
     background-color: transparent;
@@ -133,18 +101,14 @@ hr{
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
 }
-
 #main-btn:hover {
     background-color: white;
     color: black;
 }
-
 #main-btn:active {
     position: relative;
     top: 1px;
 }
-
-
 /* pricing */
 #pricing {
     padding: 30px 0;
@@ -155,9 +119,11 @@ hr{
     margin-left: 4%;
 }
 .haircut-cards {
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .haircut-card {
     border-radius: 8px;
@@ -171,14 +137,30 @@ hr{
     width: 650px;
 }
 .haircut-photo-1{
-    /* margin: 20px; */
     height: 435px;
     width: 650px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: pricing-photos 20s  ease-in-out infinite;
+    animation: pricing-photos-1 15s  ease-in-out infinite;
 }
+.haircut-photo-2{
+    height: 435px;
+    width: 650px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pricing-photos-2 15s  ease-in-out infinite;
+}
+.haircut-photo-3{
+    height: 435px;
+    width: 650px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pricing-photos-3 12s  ease-in-out infinite;
+}
+
 .haircut-photo img {
     border: 1px solid #504c4c;
     border-radius: 5px;
@@ -188,7 +170,6 @@ hr{
     text-align: center;
     width: 650px;
 }
-
 /* booking */
 #booking {
     display: flex;
@@ -196,29 +177,17 @@ hr{
     align-items: baseline;
 }
 #booking-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: left;
     width: 50vw;
 }
-#booking-text p {
+#booking-text-info p {
     margin: auto;
     text-align: left;
     width: 80%;
 }
-#booking-text ul {
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
-    list-style-type: none;
-    /* width: 14%; */
-}
-#booking-text ul li{
-    justify-content: center;
-    align-items: end;
-    width: 160px;
-    margin: 30px 0;
-}
-
 #booking-form {
     background-color: #4d4d4d;
     width: 50vw;
@@ -226,12 +195,22 @@ hr{
     align-items: center;
     justify-content: center;
 }
+#booking-text-pricing{
+    /* width: 100%; */
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#booking-text-pricing > div{padding: 50px;}
 form {
     padding: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 40%;
     text-align: left;
 }
 form>i,
@@ -254,7 +233,6 @@ input {
 }
 #form-button {
     box-shadow: inset 0px 0px 0px -15px #000000;
-    /* background:linear-gradient(to bottom, #000000 5%, #000000 100%); */
     background-color: rgb(94, 94, 94);
     border-radius: 5px;
     border: 1px solid #ffffff;
@@ -278,9 +256,6 @@ input {
     position: relative;
     top: 1px;
 }
-
-
-
 /* footer */
 #footer {
     background-color: rgb(0, 0, 0);
@@ -288,9 +263,7 @@ input {
     padding: 5px;
     text-align: center;
 }
-#footer>div {
-    margin: 50px;
-}
+#footer>div {margin: 50px;}
 .footer-top {
     display: flex;
     flex-direction: row;
@@ -322,11 +295,9 @@ input {
     background-color: black;
     opacity: .5;
 }
-
 /* animations */
-@keyframes pricing-photos {
+@keyframes pricing-photos-1 {
     0%   {
-        animation-delay: 10s;
     background-image: url("/images/kids1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -338,67 +309,97 @@ input {
     }
     100% {
     background-image: url("/images/kids1.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    }
+  }
+  @keyframes pricing-photos-2 {
+    0%   {
+    background-image: url("/images/adult7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    100% {
+    background-image: url("/images/adult6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+  }
+  @keyframes pricing-photos-3 {
+    0%   {
+    background-image: url("/images/beard4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    100% {
+    background-image: url("/images/beard5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     }
   }
 
-
-
 /* responsive web design */
+@media only screen and (max-width: 1800px) {
+    /* main section */
+    #main-section-text {
+        margin: 10% 0;
+    }
+}
+@media only screen and (max-width: 1515px) {
+    #main-section-text {
+        margin: 5% 0;
+    }
+}
 @media only screen and (min-width: 1400px) {
     .navbar-links-mobile {
         visibility: hidden;
     }
 }
-
 @media only screen and (max-width: 1200px) {
+    .navbar-links-mobile{
+        background-color: #000000;
+        text-align: center;
+    }
+    .navbar-links-mobile > a{
+        margin: 20px 0;
+        padding: 30px;
+    }
     #main-section{
         background-image: url("/images/clippers.jpg");
-        /* height:700px; */
-        /* height: 40vh; */
+        height:700px; 
     }
-    #main-vid{
-        /* height:700px; */
-        /* width: 100vw; */
-        /* height: 40vh; */
+    #main-section-text {
+        font-size: 1rem;
     }
-    /* #main-section-text {
-
-        padding: 1%;
-        margin: 0 0%;
-    } */
-    /* #main-section-text I{
-        font-size: 5em;
-    } */
+    form {
+        width: 50%;
+    }
+    #main-section-booked > div{
+        font-size: 12px;
+        margin: -400px;
+    }
 }
-
-
 /* mobile view */
 @media only screen and (max-width: 800px) {
-    /* #main-section{
-        height:700px;
-    } */
-    /* #main-vid{
-        height:700px;
-    } */
-    /* navbar */
+    .dark{
+        background-color: #000000;
+        margin-bottom: -20px;
+    }
     .navbar-links {
         visibility: hidden;
     }
-
+    .navbar-links > div{
+        margin:0 80%;
+    } 
     #navbar-menu-button {
         visibility: visible;
     }
-
     .navbar-links-mobile {
         visibility: hidden;
     }
-
     .navbar-links-mobile-active {
         visibility: visible;
     }
-
     /* pricing */
     .pricing-cards {
         display: flex;
@@ -408,6 +409,16 @@ input {
         display: flex;
         flex-direction: column;
     }
+
+    .haircut-type, .haircut-price, .haircut-photo-1, .haircut-photo-2, .haircut-photo-3{
+        margin: auto;
+        width:85%;
+    }
+    /* .haircut-photo-2 img{
+        background-repeat: initial;
+        background-size:contain;
+    } */
+
     /* booking */
     #booking {
         display: flex;
@@ -419,11 +430,6 @@ input {
         justify-content: left;
         width: 100vw;
     }
-    /* #booking-text p {
-        margin: auto;
-        text-align: left;
-        width: 80%;
-    } */
     #booking-form {
         background-color: #4d4d4d;
         width: 100vw;
@@ -432,25 +438,31 @@ input {
         justify-content: center;
     }
     form {
-        padding: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 30%;
-        text-align: left;
+        width: 60%;
+    }
+    #main-section-booked{
+        margin: auto;
+        width: 80%;
+    }
+    #main-section-booked > div{
+        padding: 100px 0;
     }
 }
-
+@media only screen and (max-width: 515px) {
+    .navbar-links > div{
+        margin:0 65%;
+    } 
+}
 @media only screen and (max-width: 450px) {
-    #navbar {
-        justify-content: space-between;
-        /* padding: 50px; */
-    }
-
-    /* .navbar-links, .navbar-brand{
-        padding: 50px;
-    } */
+    .navbar-links > div{
+        margin:0 40%;
+    } 
     .footer-top {
         flex-direction: column-reverse;
     }
+}
+@media only screen and (max-width: 450px) {
+    .navbar-links > div{
+        margin:0 50%;
+    } 
 }
