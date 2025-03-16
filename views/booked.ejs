@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,40 +13,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
+
 <body>
 
     <div id="main-section">
         <!-- navbar -->
         <div id="navbar">
             <div class="navbar-brand">
-
-                <h3><a href="/">4K TRIMZ</a></h3>
+                <h3>4K TRIMZ</h3>
             </div>
             <div class="navbar-links">
-                <a href="">PRICING</a>
-                <a href="">ABOUT US</a>
-                <a href="">GALLERY</a>
                 <div>
                     <button id="navbar-menu-button"><i class="fa-solid fa-bars"></i></button>
                 </div>
+                <a href="#booking-form">PRICING</a>
+                <a href="">ABOUT US</a>
+                <a href="">GALLERY</a>
+                
             </div>
         </div>
         <div class="navbar-links-mobile">
             <a href="">PRICING</a>
+            <hr>
             <a href="">ABOUT US</a>
+            <hr>
             <a href="">GALLERY</a>
         </div>
 
         <!-- main-section -->
-        <div id="main-section-text">
-            <i class="fa-regular fa-circle-check"></i>
-            <h1>THANK YOU <%= name %> FOR BOOKING YOUR HAIRCUT WITH US!</h1>
-            <h3>BOOKING DETAILS:<h3>
-                    <p>Haircut: <%= haircut %></p>
-                    <p>Time: <%= time %></p>
-                    <p>Date: <%= date %></p>
-                    <h4>FOR FURTHER INQUIRIES:</h4>
-                    <P>4ktrims@gmail.com</P>
+        <div id="main-section-booked">
+            <div id="main-section-text">
+                <i class="fa-regular fa-circle-check"></i>
+                <h1>THANK YOU <%= name %> FOR BOOKING YOUR HAIRCUT WITH US!</h1>
+                <h3>BOOKING DETAILS:<h3>
+                        <p>Haircut: <%= haircut %></p>
+                        <p>Time: <%= time %></p>
+                        <p>Date: <%= date %></p>
+                        <h4>FOR FURTHER INQUIRIES:</h4>
+                        <P>4ktrims@gmail.com</P>
+            </div>
         </div>
     </div>
 
