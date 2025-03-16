@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=L0Pk3OVbxRU - 3:00 - use format for hairstyle im
 /* 4 SITES DOWN AND 2 IN THE DRIVE. UR NEARLY THERE. I BELIEVE IN U */
 
 body {
+    overflow-x: hidden;
     background-color: rgb(84, 92, 92);
     margin: auto;
     /* font-family: "Yeseva One", serif; */
@@ -463,6 +464,6 @@ input {
 }
 @media only screen and (max-width: 450px) {
     .navbar-links > div{
-        margin:0 50%;
+        margin:0 40%;
     } 
 }
