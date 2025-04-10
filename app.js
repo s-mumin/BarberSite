@@ -290,6 +290,13 @@ app.delete("/dashboard/:id", async (req, res) => {
     res.render("dashboard", {bookedHaircut, deleteHaircut, id})
 })
 
+app.get('/gallery', (req, res) => {
+    res.render("gallery")
+})
+
+app.get('/about', (req, res) => {
+    res.render("about")
+})
 
 // incorrect URL
 app.get('*', function(req, res){
